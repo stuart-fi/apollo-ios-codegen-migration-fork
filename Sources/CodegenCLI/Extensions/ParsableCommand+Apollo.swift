@@ -1,6 +1,6 @@
 import Foundation
 import ArgumentParser
-import ApolloCodegenLib
+import ApolloCodegenLibMigration
 
 extension ParsableCommand {
   func rootOutputURL(for inputOptions: InputOptions) -> URL? {

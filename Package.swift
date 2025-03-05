@@ -6,12 +6,12 @@
 import PackageDescription
 
 let package = Package(
-  name: "ApolloCodegen",
+  name: "ApolloCodegenMigration",
   platforms: [
     .macOS(.v12)
   ],
   products: [
-    .library(name: "ApolloCodegenLib", targets: ["ApolloCodegenLib"]),
+    .library(name: "ApolloCodegenLibMigration", targets: ["ApolloCodegenLibMigration"]),
     .library(name: "CodegenCLI", targets: ["CodegenCLI"]),
     .executable(name: "apollo-ios-cli", targets: ["apollo-ios-cli"]),
   ],
@@ -28,7 +28,7 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "ApolloCodegenLib",
+      name: "ApolloCodegenLibMigration",
       dependencies: [
         "GraphQLCompiler",
         "IR",
@@ -82,7 +82,7 @@ let package = Package(
     .target(
       name: "CodegenCLI",
       dependencies: [
-        "ApolloCodegenLib",
+        "ApolloCodegenLibMigration",
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
       ],
       swiftSettings: [.enableUpcomingFeature("ExistentialAny")]

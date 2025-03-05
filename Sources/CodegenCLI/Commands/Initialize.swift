@@ -1,6 +1,6 @@
 import Foundation
 import ArgumentParser
-import ApolloCodegenLib
+import ApolloCodegenLibMigration
 
 public struct Initialize: AsyncParsableCommand {
 
