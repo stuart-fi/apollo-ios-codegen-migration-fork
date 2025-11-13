@@ -4,12 +4,12 @@
 import PackageDescription
 
 let package = Package(
-  name: "ApolloCodegen",
+  name: "FiApolloCodegen",
   platforms: [
     .macOS(.v10_15)    
   ],
   products: [
-    .library(name: "ApolloCodegenLib", targets: ["ApolloCodegenLib"]),
+    .library(name: "FiApolloCodegenLib", targets: ["FiApolloCodegenLib"]),
     .library(name: "CodegenCLI", targets: ["CodegenCLI"]),
     .executable(name: "apollo-ios-cli", targets: ["apollo-ios-cli"]),
   ],
@@ -26,7 +26,7 @@ let package = Package(
   ],
   targets: [
     .target(
-      name: "ApolloCodegenLib",
+      name: "FiApolloCodegenLib",
       dependencies: [
         "GraphQLCompiler",
         "IR",
@@ -74,7 +74,7 @@ let package = Package(
     .target(
       name: "CodegenCLI",
       dependencies: [
-        "ApolloCodegenLib",
+        "FiApolloCodegenLib",
         .product(name: "ArgumentParser", package: "swift-argument-parser"),
       ]
     ),
