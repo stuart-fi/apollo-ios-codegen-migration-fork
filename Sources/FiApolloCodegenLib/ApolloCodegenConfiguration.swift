@@ -1004,7 +1004,7 @@ public struct ApolloCodegenConfiguration: Codable, Equatable {
     self.experimentalFeatures = experimentalFeatures
     self.schemaDownload = schemaDownload
     self.operationManifest = operationManifest
-    self.ApolloAPITargetName = options.cocoapodsCompatibleImportStatements ? "Apollo" : "ApolloAPI"
+    self.ApolloAPITargetName = options.cocoapodsCompatibleImportStatements ? "FiApollo" : "FiApolloAPI"
   }
 
   // MARK: Codable
